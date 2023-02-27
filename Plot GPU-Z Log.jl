@@ -11,7 +11,7 @@ for i in enumerate(names(df))
     println(i)
 end
 selected = [2,5,6,12,28,29]
-plot([scatter(df, x=:Date, y=Symbol(colname), name=colname) for colname in names(df)[selected]])
+plot([scatter(df, x=Symbol(names(df)[1]), y=Symbol(colname), name=colname) for colname in names(df)[selected]])
 
 #= perf cap reason codes:
 Power. Indicating perf is limited by total power limit.
